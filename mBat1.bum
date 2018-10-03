@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig;ch.ethz.eventb.qualprob.qpConfig" org.eventb.texttools.text_lastmodified="1538567429131" org.eventb.texttools.text_representation="machine mBat1 refines mBat sees cBat1&#10;&#10;variables position&#10;invariants&#10;&#9;@a position ∈ Personne → Zone&#10;&#9;@b ext = position∼[{Exterieur}]&#10;variant&#10;&#9;⋃ p·p∈Personne ∣  {p}×(1‥distance(position(p)))&#10;&#10;events&#10;  &#9;event INITIALISATION&#10;  &#9;then&#10;  &#9;&#9;@i position ≔ Personne × {Exterieur}&#10;  &#9;end&#10;&#10; &#9;event entrerBat refines entrer&#10;&#9;&#9;any p z&#10;&#9;&#9;where&#10;&#9; &#9;&#9;@e1 p ∈ Personne&#10;&#9; &#9;&#9;@e2 z ∈ Zone∖{Exterieur}&#10;&#9; &#9;&#9;@e3 position(p) = Exterieur&#10;&#9; &#9;&#9;@e4 sortie(z) = Exterieur&#10;&#9;&#9;then&#10;&#9;&#9;&#9;@e position(p) ≔ z&#10;&#9;end&#10;&#10;&#9;event sortirBat refines sortir&#10;&#9;&#9;any p&#10;&#9;&#9;&#9;where&#10;&#9;&#9;&#9;@sb1 p ∈ Personne&#10;&#9;&#9;&#9;@sb2 position(p) ≠ Exterieur&#10;&#9;&#9;&#9;@sb3 sortie(position(p)) = Exterieur&#10;&#9;&#9;then&#10;&#9;&#9;&#9;@sb position(p) ≔ Exterieur&#10;&#9;end&#10;&#10;&#9;event passer // Une personne peut passer d’une zone à l’autre&#10;&#9;&#9;any p z&#10;&#9;&#9;where&#10;&#9;&#9;&#9;@p1 p ∈ Personne&#10;&#9; &#9;&#9;@p2 z ∈ Zone∖{Exterieur}&#10;&#9; &#9;&#9;@p3 position(p) ≠ Exterieur&#10;&#9; &#9;then&#10;&#9; &#9;&#9;@p position(p) ≔ z&#10;&#9;end&#10;&#10;&#9;convergent event sortirVersExterieur&#10;&#9;&#9;any p&#10;&#9;&#9;where&#10;&#9;&#9;&#9;@sve1 p ∈ Personne&#10;&#9;&#9;&#9;@sve2 position(p) ≠ Exterieur&#10;&#9;&#9;then&#10;&#9;&#9;&#9;@sve position(p) ≔ sortie(position(p))&#10;&#9;end&#10;&#10;end" version="5">
+<org.eventb.core.refinesMachine name="_fROq4MGcEeiEVeQ7ZLfZtg" org.eventb.core.target="mBat"/>
+<org.eventb.core.seesContext name="_fROq4cGcEeiEVeQ7ZLfZtg" org.eventb.core.target="cBat1"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_HbmAkMGeEeiEVeQ7ZLfZtg" org.eventb.core.assignment="position ≔ Personne × {Exterieur}" org.eventb.core.label="i"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_QVwfMMGeEeiEVeQ7ZLfZtg" org.eventb.core.identifier="position"/>
+<org.eventb.core.invariant name="_s02gkMGfEeiEVeQ7ZLfZtg" org.eventb.core.label="a" org.eventb.core.predicate="position ∈ Personne → Zone"/>
+<org.eventb.core.event name="_s02gkcGfEeiEVeQ7ZLfZtg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrerBat">
+<org.eventb.core.refinesEvent name="_s03HoMGfEeiEVeQ7ZLfZtg" org.eventb.core.target="entrer"/>
+<org.eventb.core.parameter name="_s03HocGfEeiEVeQ7ZLfZtg" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_quteAMGgEeiEVeQ7ZLfZtg" org.eventb.core.identifier="z"/>
+<org.eventb.core.guard name="_s03usMGfEeiEVeQ7ZLfZtg" org.eventb.core.label="e1" org.eventb.core.predicate="p ∈ Personne"/>
+<org.eventb.core.guard name="_s03uscGfEeiEVeQ7ZLfZtg" org.eventb.core.label="e2" org.eventb.core.predicate="z ∈ Zone∖{Exterieur}"/>
+<org.eventb.core.guard name="_quuFEMGgEeiEVeQ7ZLfZtg" org.eventb.core.label="e3" org.eventb.core.predicate="position(p) = Exterieur"/>
+<org.eventb.core.guard name="_EQoZEsGhEeiEVeQ7ZLfZtg" org.eventb.core.label="e4" org.eventb.core.predicate="sortie(z) = Exterieur"/>
+<org.eventb.core.action name="_KQ8yMcGgEeiEVeQ7ZLfZtg" org.eventb.core.assignment="position(p) ≔ z" org.eventb.core.label="e"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_EQnyAMGhEeiEVeQ7ZLfZtg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortirBat">
+<org.eventb.core.refinesEvent name="_EQoZEMGhEeiEVeQ7ZLfZtg" org.eventb.core.target="sortir"/>
+<org.eventb.core.parameter name="_EQoZEcGhEeiEVeQ7ZLfZtg" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_EQpAIMGhEeiEVeQ7ZLfZtg" org.eventb.core.label="sb1" org.eventb.core.predicate="p ∈ Personne"/>
+<org.eventb.core.guard name="_OUDl0MGhEeiEVeQ7ZLfZtg" org.eventb.core.label="sb2" org.eventb.core.predicate="position(p) ≠ Exterieur"/>
+<org.eventb.core.guard name="_beXrAMGhEeiEVeQ7ZLfZtg" org.eventb.core.label="sb3" org.eventb.core.predicate="sortie(position(p)) = Exterieur"/>
+<org.eventb.core.action name="_EQpnMMGhEeiEVeQ7ZLfZtg" org.eventb.core.assignment="position(p) ≔ Exterieur" org.eventb.core.label="sb"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_Bzw4kMGiEeiEVeQ7ZLfZtg" org.eventb.core.comment="Une personne peut passer d’une zone à l’autre" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="passer">
+<org.eventb.core.parameter name="_BzxfoMGiEeiEVeQ7ZLfZtg" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_BzxfocGiEeiEVeQ7ZLfZtg" org.eventb.core.identifier="z"/>
+<org.eventb.core.guard name="_BzxfosGiEeiEVeQ7ZLfZtg" org.eventb.core.label="p1" org.eventb.core.predicate="p ∈ Personne"/>
+<org.eventb.core.guard name="_BzyGsMGiEeiEVeQ7ZLfZtg" org.eventb.core.label="p2" org.eventb.core.predicate="z ∈ Zone∖{Exterieur}"/>
+<org.eventb.core.guard name="_it7-IMGjEeiEVeQ7ZLfZtg" org.eventb.core.label="p3" org.eventb.core.predicate="position(p) ≠ Exterieur"/>
+<org.eventb.core.action name="_sdGnkcGiEeiEVeQ7ZLfZtg" org.eventb.core.assignment="position(p) ≔ z" org.eventb.core.label="p"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_8IT94MLvEeiX8-63veHLaA" org.eventb.core.label="b" org.eventb.core.predicate="ext = position∼[{Exterieur}]"/>
+<org.eventb.core.variant name="_8IUk8MLvEeiX8-63veHLaA" org.eventb.core.expression="⋃ p·p∈Personne ∣  {p}×(1‥distance(position(p)))"/>
+<org.eventb.core.event name="_8IVMAMLvEeiX8-63veHLaA" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="sortirVersExterieur">
+<org.eventb.core.parameter name="_SjTHwMLxEeiX8-63veHLaA" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_SjTHwsLxEeiX8-63veHLaA" org.eventb.core.label="sve1" org.eventb.core.predicate="p ∈ Personne"/>
+<org.eventb.core.guard name="_oU4vUMLyEeiX8-63veHLaA" org.eventb.core.label="sve2" org.eventb.core.predicate="position(p) ≠ Exterieur"/>
+<org.eventb.core.action name="_SjTu0cLxEeiX8-63veHLaA" org.eventb.core.assignment="position(p) ≔ sortie(position(p))" org.eventb.core.label="sve"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

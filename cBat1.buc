@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig" org.eventb.texttools.text_lastmodified="1538567386640" org.eventb.texttools.text_representation="context cBat1 extends cBat&#10;&#10;sets Zone&#10;&#10;constants Exterieur sortie distance&#10;&#10;axioms&#10;  &#9;@f finite(Zone) // Le bâtiment est structuré en un nombre ﬁni de zones&#10;  &#9;@g Exterieur ∈ Zone //  L’extérieur du bâtiment est considéré comme une zone&#10;  &#9;@h sortie ∈ Zone∖{Exterieur} → Zone&#10; &#9;@i distance ∈ Zone → ℕ&#10;&#9;@j ∀ z · z ∈Zone∖{Exterieur} ⇒  distance(z) &gt; distance(sortie(z))&#10;&#10;end" version="3">
+<org.eventb.core.extendsContext name="_XYjecMGcEeiEVeQ7ZLfZtg" org.eventb.core.target="cBat"/>
+<org.eventb.core.carrierSet name="_XYjeccGcEeiEVeQ7ZLfZtg" org.eventb.core.identifier="Zone"/>
+<org.eventb.core.constant name="_XYkFgMGcEeiEVeQ7ZLfZtg" org.eventb.core.identifier="Exterieur"/>
+<org.eventb.core.axiom name="_XYkskMGcEeiEVeQ7ZLfZtg" org.eventb.core.comment="Le bâtiment est structuré en un nombre ﬁni de zones" org.eventb.core.label="f" org.eventb.core.predicate="finite(Zone)"/>
+<org.eventb.core.axiom name="_XYkskcGcEeiEVeQ7ZLfZtg" org.eventb.core.comment="L’extérieur du bâtiment est considéré comme une zone" org.eventb.core.label="g" org.eventb.core.predicate="Exterieur ∈ Zone"/>
+<org.eventb.core.constant name="_q_xgMMGdEeiEVeQ7ZLfZtg" org.eventb.core.identifier="sortie"/>
+<org.eventb.core.axiom name="_q_yHQMGdEeiEVeQ7ZLfZtg" org.eventb.core.label="h" org.eventb.core.predicate="sortie ∈ Zone∖{Exterieur} → Zone"/>
+<org.eventb.core.axiom name="_ymLPYMLmEeiX8-63veHLaA" org.eventb.core.label="i" org.eventb.core.predicate="distance ∈ Zone → ℕ"/>
+<org.eventb.core.constant name="_zx6CsMLmEeiX8-63veHLaA" org.eventb.core.identifier="distance"/>
+<org.eventb.core.axiom name="_twIwsMLqEeiX8-63veHLaA" org.eventb.core.label="j" org.eventb.core.predicate="∀ z · z ∈Zone∖{Exterieur} ⇒  distance(z) &gt; distance(sortie(z))"/>
+</org.eventb.core.contextFile>

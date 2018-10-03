@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig;ch.ethz.eventb.qualprob.qpConfig">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/TPB/cBat.bcc" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.seesContext#_Tkn50MGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.scInternalContext name="cBat">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="a" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/TPB/cBat.buc|org.eventb.core.contextFile#cBat|org.eventb.core.axiom#_eDvXAMLvEeiX8-63veHLaA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/TPB/cBat.buc|org.eventb.core.contextFile#cBat|org.eventb.core.carrierSet#_RNnmMMGcEeiEVeQ7ZLfZtg" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="cBau" org.eventb.core.label="e" org.eventb.core.predicate="ext⊆Personne" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.invariant#_TkpvAcGcEeiEVeQ7ZLfZtg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="ext" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.variable#_TkpvAMGcEeiEVeQ7ZLfZtg" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.scEvent ch.ethz.eventb.qualprob.probabilistic="false" name="cBav" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#'">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="ext ≔ Personne" org.eventb.core.label="e" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#'|org.eventb.core.action#_TkpH8MGcEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent ch.ethz.eventb.qualprob.probabilistic="false" name="cBaw" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrer" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_Tkq9IMGcEeiEVeQ7ZLfZtg">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="p1" org.eventb.core.predicate="p∈ext" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_Tkq9IMGcEeiEVeQ7ZLfZtg|org.eventb.core.guard#_TksLQMGcEeiEVeQ7ZLfZtg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="p" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_Tkq9IMGcEeiEVeQ7ZLfZtg|org.eventb.core.parameter#_TkrkMMGcEeiEVeQ7ZLfZtg" org.eventb.core.type="Personne"/>
+<org.eventb.core.scAction name="q" org.eventb.core.assignment="ext ≔ ext ∖ {p}" org.eventb.core.label="p2" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_Tkq9IMGcEeiEVeQ7ZLfZtg|org.eventb.core.action#_TksyUMGcEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent ch.ethz.eventb.qualprob.probabilistic="false" name="cBax" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortir" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_TksyUcGcEeiEVeQ7ZLfZtg">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="q1" org.eventb.core.predicate="p∉ext" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_TksyUcGcEeiEVeQ7ZLfZtg|org.eventb.core.guard#_TkuAcMGcEeiEVeQ7ZLfZtg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="p" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_TksyUcGcEeiEVeQ7ZLfZtg|org.eventb.core.parameter#_TktZYMGcEeiEVeQ7ZLfZtg" org.eventb.core.type="Personne"/>
+<org.eventb.core.scAction name="q" org.eventb.core.assignment="ext ≔ ext∪{p}" org.eventb.core.label="q2" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_TksyUcGcEeiEVeQ7ZLfZtg|org.eventb.core.action#_TkungMGcEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

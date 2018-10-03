@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig;ch.ethz.eventb.qualprob.qpConfig" org.eventb.texttools.text_lastmodified="1538122614116" org.eventb.texttools.text_representation="machine mBat2 refines mBat1 sees cBat1&#10;&#10;variables position&#10;&#10;events&#10;&#9;event INITIALISATION extends INITIALISATION end&#10;&#10;&#9;event entrerBat extends entrerBat end&#10;&#10;&#9;event sortirBat extends sortirBat end&#10;&#10;&#9;event passer extends passer end&#10;&#10;&#9;event sortirVersExterieur extends sortirVersExterieur end&#10;&#10;&#9;event changerZone refines entrerBat passer&#10;&#9;&#9;any p z&#10;&#9;&#9;where&#10;&#9;&#9;&#9;@c1 p ∈ Personne&#10;&#9; &#9;&#9;@c2 z ∈ Zone∖{Exterieur}&#10; &#9;&#9;then&#10; &#9;&#9;&#9;@c position(p) ≔  z&#10;&#9;end&#10;&#10;&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_Jv6pwML1EeiX8-63veHLaA" org.eventb.core.target="mBat1"/>
+<org.eventb.core.seesContext name="_Jv7Q0ML1EeiX8-63veHLaA" org.eventb.core.target="cBat1"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="_Jv734ML1EeiX8-63veHLaA" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrerBat">
+<org.eventb.core.refinesEvent name="_Jv734cL1EeiX8-63veHLaA" org.eventb.core.target="entrerBat"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_SQwpcML1EeiX8-63veHLaA" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirBat">
+<org.eventb.core.refinesEvent name="_dPHNYML1EeiX8-63veHLaA" org.eventb.core.target="sortirBat"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_SQxQgML1EeiX8-63veHLaA" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="passer">
+<org.eventb.core.refinesEvent name="_SQxQgsL1EeiX8-63veHLaA" org.eventb.core.target="passer"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_dPIbgcL1EeiX8-63veHLaA" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortirVersExterieur">
+<org.eventb.core.refinesEvent name="_kflKUML1EeiX8-63veHLaA" org.eventb.core.target="sortirVersExterieur"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_kflKUcL1EeiX8-63veHLaA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="changerZone">
+<org.eventb.core.refinesEvent name="_kflxYML1EeiX8-63veHLaA" org.eventb.core.target="entrerBat"/>
+<org.eventb.core.refinesEvent name="_kflxYcL1EeiX8-63veHLaA" org.eventb.core.target="passer"/>
+<org.eventb.core.parameter name="_Jv7348L1EeiX8-63veHLaA" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_Jv8e8ML1EeiX8-63veHLaA" org.eventb.core.identifier="z"/>
+<org.eventb.core.guard name="_Jv8e8cL1EeiX8-63veHLaA" org.eventb.core.label="c1" org.eventb.core.predicate="p ∈ Personne"/>
+<org.eventb.core.guard name="_Jv8e8sL1EeiX8-63veHLaA" org.eventb.core.label="c2" org.eventb.core.predicate="z ∈ Zone∖{Exterieur}"/>
+<org.eventb.core.action name="_Jv9GAML1EeiX8-63veHLaA" org.eventb.core.assignment="position(p) ≔  z" org.eventb.core.label="c"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_290x0ML2EeiX8-63veHLaA" org.eventb.core.identifier="position"/>
+</org.eventb.core.machineFile>

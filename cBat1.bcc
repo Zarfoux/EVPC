@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/TPB/cBat.bcc|org.eventb.core.scContextFile#cBat" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.extendsContext#_XYjecMGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.scInternalContext name="cBat">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="a" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/TPB/cBat.buc|org.eventb.core.contextFile#cBat|org.eventb.core.axiom#_eDvXAMLvEeiX8-63veHLaA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/TPB/cBat.buc|org.eventb.core.contextFile#cBat|org.eventb.core.carrierSet#_RNnmMMGcEeiEVeQ7ZLfZtg" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="cBau" org.eventb.core.label="f" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_XYkskMGcEeiEVeQ7ZLfZtg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cBav" org.eventb.core.label="g" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_XYkskcGcEeiEVeQ7ZLfZtg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cBaw" org.eventb.core.label="h" org.eventb.core.predicate="sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_q_yHQMGdEeiEVeQ7ZLfZtg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cBax" org.eventb.core.label="i" org.eventb.core.predicate="distance∈Zone → ℕ" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_ymLPYMLmEeiX8-63veHLaA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cBay" org.eventb.core.label="j" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒distance(z)&gt;distance(sortie(z))" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_twIwsMLqEeiX8-63veHLaA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Exterieur" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.constant#_XYkFgMGcEeiEVeQ7ZLfZtg" org.eventb.core.type="Zone"/>
+<org.eventb.core.scCarrierSet name="Zone" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.carrierSet#_XYjeccGcEeiEVeQ7ZLfZtg" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.scConstant name="distance" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.constant#_zx6CsMLmEeiX8-63veHLaA" org.eventb.core.type="ℙ(Zone×ℤ)"/>
+<org.eventb.core.scConstant name="sortie" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.constant#_q_xgMMGdEeiEVeQ7ZLfZtg" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.scContextFile>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="a" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/TPB/cBat.buc|org.eventb.core.contextFile#cBat|org.eventb.core.axiom#_eDvXAMLvEeiX8-63veHLaA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/TPB/cBat.buc|org.eventb.core.contextFile#cBat|org.eventb.core.carrierSet#_RNnmMMGcEeiEVeQ7ZLfZtg" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.scContextFile>

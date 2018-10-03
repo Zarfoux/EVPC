@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poPredicate name="Personnf" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/TPB/cBat.buc|org.eventb.core.contextFile#cBat|org.eventb.core.axiom#_eDvXAMLvEeiX8-63veHLaA"/>
+<org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="distance" org.eventb.core.type="ℙ(Zone×ℤ)"/>
+<org.eventb.core.poIdentifier name="sortie" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poPredicate name="Exterieus" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_XYkskMGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="Exterieut" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_XYkskcGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="Exterieuu" org.eventb.core.predicate="sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_q_yHQMGdEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="Exterieuv" org.eventb.core.predicate="distance∈Zone → ℕ" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_ymLPYMLmEeiX8-63veHLaA"/>
+<org.eventb.core.poPredicate name="Exterieuw" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒distance(z)&gt;distance(sortie(z))" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_twIwsMLqEeiX8-63veHLaA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="ext" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(Personne×Zone)"/>
+<org.eventb.core.poPredicate name="positioo" org.eventb.core.predicate="ext⊆Personne" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.invariant#_TkpvAcGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="positiop" org.eventb.core.predicate="position∈Personne → Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="positioq" org.eventb.core.predicate="ext=position∼[{Exterieur}]" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositioo" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositioo" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#EVTIDENTpositioo" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositiop" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="z" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositiop" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#EVTIDENTpositiop" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_s03usMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="z∈Zone ∖ {Exterieur}" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_s03uscGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="position(p)=Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_quuFEMGgEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="sortie(z)=Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_EQoZEsGhEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositioq" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositioq" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#EVTIDENTpositioq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg|org.eventb.core.guard#_EQpAIMGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position(p)≠Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg|org.eventb.core.guard#_OUDl0MGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="sortie(position(p))=Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg|org.eventb.core.guard#_beXrAMGhEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositior" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="z" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositior" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#EVTIDENTpositior" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_Bzw4kMGiEeiEVeQ7ZLfZtg|org.eventb.core.guard#_BzxfosGiEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="z∈Zone ∖ {Exterieur}" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_Bzw4kMGiEeiEVeQ7ZLfZtg|org.eventb.core.guard#_BzyGsMGiEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="position(p)≠Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_Bzw4kMGiEeiEVeQ7ZLfZtg|org.eventb.core.guard#_it7-IMGjEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositios" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositios" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#EVTIDENTpositios" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA|org.eventb.core.guard#_SjTHwsLxEeiX8-63veHLaA"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position(p)≠Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA|org.eventb.core.guard#_oU4vUMLyEeiX8-63veHLaA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TPB/mBat2.bpo|org.eventb.core.poFile#mBat2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1"/>
+</org.eventb.core.poFile>

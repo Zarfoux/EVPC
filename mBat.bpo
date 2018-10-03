@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poPredicate name="Personnf" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/TPB/cBat.buc|org.eventb.core.contextFile#cBat|org.eventb.core.axiom#_eDvXAMLvEeiX8-63veHLaA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TPB/mBat.bpo|org.eventb.core.poFile#mBat|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="ext" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcBav" org.eventb.core.parentSet="/TPB/mBat.bpo|org.eventb.core.poFile#mBat|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="ext'" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcBav" org.eventb.core.parentSet="/TPB/mBat.bpo|org.eventb.core.poFile#mBat|org.eventb.core.poPredicateSet#EVTIDENTcBav" org.eventb.core.poStamp="1"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTcBaw" org.eventb.core.parentSet="/TPB/mBat.bpo|org.eventb.core.poFile#mBat|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="ext'" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcBaw" org.eventb.core.parentSet="/TPB/mBat.bpo|org.eventb.core.poFile#mBat|org.eventb.core.poPredicateSet#EVTIDENTcBaw" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈ext" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_Tkq9IMGcEeiEVeQ7ZLfZtg|org.eventb.core.guard#_TksLQMGcEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcBax" org.eventb.core.parentSet="/TPB/mBat.bpo|org.eventb.core.poFile#mBat|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="ext'" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcBax" org.eventb.core.parentSet="/TPB/mBat.bpo|org.eventb.core.poFile#mBat|org.eventb.core.poPredicateSet#EVTIDENTcBax" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∉ext" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_TksyUcGcEeiEVeQ7ZLfZtg|org.eventb.core.guard#_TkuAcMGcEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TPB/mBat.bpo|org.eventb.core.poFile#mBat|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ext⊆Personne" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.invariant#_TkpvAcGcEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

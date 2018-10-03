@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;org.eventb.codegen.ui.cgConfig;ch.ethz.eventb.qualprob.qpConfig" org.eventb.texttools.text_lastmodified="1538567351841" org.eventb.texttools.text_representation="machine mBat sees cBat&#10;&#10;variables ext&#10;&#10;invariants&#10;  @e ext ⊆ Personne&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @e ext ≔ Personne&#10;  end&#10;&#10;  event entrer // Une personne extérieure au bâtiment peut entrer&#10;    any p&#10;    where&#10;      @p1 p ∈ ext&#10;    then&#10;      @p2 ext ≔ ext∖{p}&#10;  end&#10;&#10;  event sortir // Une personne dans le bâtiment devra toujours pouvoir sortir&#10;    any p&#10;    where&#10;      @q1 p ∉ ext&#10;    then&#10;      @q2 ext ≔ ext∪{p}&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.seesContext name="_Tkn50MGcEeiEVeQ7ZLfZtg" org.eventb.core.target="cBat"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_TkpH8MGcEeiEVeQ7ZLfZtg" org.eventb.core.assignment="ext ≔ Personne" org.eventb.core.label="e"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_TkpvAMGcEeiEVeQ7ZLfZtg" org.eventb.core.identifier="ext"/>
+<org.eventb.core.invariant name="_TkpvAcGcEeiEVeQ7ZLfZtg" org.eventb.core.label="e" org.eventb.core.predicate="ext ⊆ Personne"/>
+<org.eventb.core.event name="_Tkq9IMGcEeiEVeQ7ZLfZtg" org.eventb.core.comment="Une personne extérieure au bâtiment peut entrer" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrer">
+<org.eventb.core.parameter name="_TkrkMMGcEeiEVeQ7ZLfZtg" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_TksLQMGcEeiEVeQ7ZLfZtg" org.eventb.core.label="p1" org.eventb.core.predicate="p ∈ ext"/>
+<org.eventb.core.action name="_TksyUMGcEeiEVeQ7ZLfZtg" org.eventb.core.assignment="ext ≔ ext∖{p}" org.eventb.core.label="p2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_TksyUcGcEeiEVeQ7ZLfZtg" org.eventb.core.comment="Une personne dans le bâtiment devra toujours pouvoir sortir" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortir">
+<org.eventb.core.parameter name="_TktZYMGcEeiEVeQ7ZLfZtg" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_TkuAcMGcEeiEVeQ7ZLfZtg" org.eventb.core.label="q1" org.eventb.core.predicate="p ∉ ext"/>
+<org.eventb.core.action name="_TkungMGcEeiEVeQ7ZLfZtg" org.eventb.core.assignment="ext ≔ ext∪{p}" org.eventb.core.label="q2"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

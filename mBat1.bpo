@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poPredicate name="Personnf" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/TPB/cBat.buc|org.eventb.core.contextFile#cBat|org.eventb.core.axiom#_eDvXAMLvEeiX8-63veHLaA"/>
+<org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="distance" org.eventb.core.type="ℙ(Zone×ℤ)"/>
+<org.eventb.core.poIdentifier name="sortie" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poPredicate name="Exterieus" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_XYkskMGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="Exterieut" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_XYkskcGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="Exterieuu" org.eventb.core.predicate="sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_q_yHQMGdEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="Exterieuv" org.eventb.core.predicate="distance∈Zone → ℕ" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_ymLPYMLmEeiX8-63veHLaA"/>
+<org.eventb.core.poPredicate name="Exterieuw" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒distance(z)&gt;distance(sortie(z))" org.eventb.core.source="/TPB/cBat1.buc|org.eventb.core.contextFile#cBat1|org.eventb.core.axiom#_twIwsMLqEeiX8-63veHLaA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poIdentifier name="ext" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(Personne×Zone)"/>
+<org.eventb.core.poPredicate name="positioo" org.eventb.core.predicate="ext⊆Personne" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.invariant#_TkpvAcGcEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="VWD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of variant" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒p∈dom(position)∧position∈Personne ⇸ Zone∧position(p)∈dom(distance)∧distance∈Zone ⇸ ℤ" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.variant#_8IUk8MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.variant#_8IUk8MLvEeiX8-63veHLaA"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="FIN" org.eventb.core.accurate="true" org.eventb.core.poDesc="Finiteness of variant" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(⋃p⦂Personne·p∈Personne ∣ {p} × 1 ‥ distance(position(p)))" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.variant#_8IUk8MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.variant#_8IUk8MLvEeiX8-63veHLaA"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositiop"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Personne × {Exterieur}∈Personne → Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#INITIALISATION\/a\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/b/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositiop"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Personne=(Personne × {Exterieur})∼[{Exterieur}]" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#INITIALISATION\/b\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositiop" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="ext'" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositiop" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTIDENTpositiop" org.eventb.core.poStamp="8"/>
+<org.eventb.core.poSequent name="entrerBat/e3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositioq)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(position)∧position∈Personne ⇸ Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_quuFEMGgEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_quuFEMGgEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositioq)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="entrerBat/e4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositioq*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="z∈dom(sortie)∧sortie∈Zone ⇸ Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_EQoZEsGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_EQoZEsGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositioq*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="entrerBat/a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{p ↦ z}∈Personne → Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_Tkq9IMGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#entrerBat\/a\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="entrerBat/b/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ext ∖ {p}=(position{p ↦ z})∼[{Exterieur}]" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_Tkq9IMGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#entrerBat\/b\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="entrerBat/p1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈ext" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_Tkq9IMGcEeiEVeQ7ZLfZtg|org.eventb.core.guard#_TksLQMGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_Tkq9IMGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_Tkq9IMGcEeiEVeQ7ZLfZtg|org.eventb.core.guard#_TksLQMGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#entrerBat\/p1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositioq" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="z" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="ext'" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpositioq)" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTIDENTpositioq" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_s03usMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="z∈Zone ∖ {Exterieur}" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_s03uscGfEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpositioq*" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositioq)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="position(p)=Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_quuFEMGgEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositioq" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositioq*" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="sortie(z)=Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_s02gkcGfEeiEVeQ7ZLfZtg|org.eventb.core.guard#_EQoZEsGhEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="sortirBat/sb2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositior("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(position)∧position∈Personne ⇸ Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg|org.eventb.core.guard#_OUDl0MGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg|org.eventb.core.guard#_OUDl0MGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositior("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sortirBat/sb3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositior)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(position)∧position∈Personne ⇸ Zone∧position(p)∈dom(sortie)∧sortie∈Zone ⇸ Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg|org.eventb.core.guard#_beXrAMGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg|org.eventb.core.guard#_beXrAMGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositior)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sortirBat/a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositior"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{p ↦ Exterieur}∈Personne → Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_TksyUcGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#sortirBat\/a\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sortirBat/b/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositior"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ext∪{p}=(position{p ↦ Exterieur})∼[{Exterieur}]" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_TksyUcGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#sortirBat\/b\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sortirBat/q1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositior"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∉ext" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_TksyUcGcEeiEVeQ7ZLfZtg|org.eventb.core.guard#_TkuAcMGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_TksyUcGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TPB/mBat.bum|org.eventb.core.machineFile#mBat|org.eventb.core.event#_TksyUcGcEeiEVeQ7ZLfZtg|org.eventb.core.guard#_TkuAcMGcEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#sortirBat\/q1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositior" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="ext'" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpositior(" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTIDENTpositior" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg|org.eventb.core.guard#_EQpAIMGhEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpositior)" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositior(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position(p)≠Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg|org.eventb.core.guard#_OUDl0MGhEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositior" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositior)" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="sortie(position(p))=Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_EQnyAMGhEeiEVeQ7ZLfZtg|org.eventb.core.guard#_beXrAMGhEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="passer/p3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositios("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(position)∧position∈Personne ⇸ Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_Bzw4kMGiEeiEVeQ7ZLfZtg|org.eventb.core.guard#_it7-IMGjEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_Bzw4kMGiEeiEVeQ7ZLfZtg|org.eventb.core.guard#_it7-IMGjEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositios("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="passer/a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{p ↦ z}∈Personne → Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_Bzw4kMGiEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#passer\/a\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="passer/b/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ext=(position{p ↦ z})∼[{Exterieur}]" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_Bzw4kMGiEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#passer\/b\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositios" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="z" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpositios(" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTIDENTpositios" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_Bzw4kMGiEeiEVeQ7ZLfZtg|org.eventb.core.guard#_BzxfosGiEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="z∈Zone ∖ {Exterieur}" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_Bzw4kMGiEeiEVeQ7ZLfZtg|org.eventb.core.guard#_BzyGsMGiEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositios" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositios(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="position(p)≠Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_Bzw4kMGiEeiEVeQ7ZLfZtg|org.eventb.core.guard#_it7-IMGjEeiEVeQ7ZLfZtg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="sortirVersExterieur/sve2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositiot'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(position)∧position∈Personne ⇸ Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA|org.eventb.core.guard#_oU4vUMLyEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA|org.eventb.core.guard#_oU4vUMLyEeiX8-63veHLaA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositiot'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sortirVersExterieur/a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{p ↦ sortie(position(p))}∈Personne → Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#sortirVersExterieur\/a\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sortirVersExterieur/b/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ext=(position{p ↦ sortie(position(p))})∼[{Exterieur}]" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#sortirVersExterieur\/b\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sortirVersExterieur/VAR" org.eventb.core.accurate="true" org.eventb.core.poDesc="Variant of event" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(⋃p0⦂Personne·p0∈Personne ∣ {p0} × 1 ‥ distance((position{p ↦ sortie(position(p))})(p0)))⊂(⋃p⦂Personne·p∈Personne ∣ {p} × 1 ‥ distance(position(p)))" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.variant#_8IUk8MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.variant#_8IUk8MLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poSequent#sortirVersExterieur\/VAR|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="sortirVersExterieur/sve/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(position)∧position∈Personne ⇸ Zone∧position(p)∈dom(sortie)∧sortie∈Zone ⇸ Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA|org.eventb.core.action#_SjTu0cLxEeiX8-63veHLaA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA|org.eventb.core.action#_SjTu0cLxEeiX8-63veHLaA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTALLHYPpositiot"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpositiot" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpositiot'" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTIDENTpositiot" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA|org.eventb.core.guard#_SjTHwsLxEeiX8-63veHLaA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpositiot" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#EVTHYPpositiot'" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position(p)≠Exterieur" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.event#_8IVMAMLvEeiX8-63veHLaA|org.eventb.core.guard#_oU4vUMLyEeiX8-63veHLaA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TPB/mBat1.bpo|org.eventb.core.poFile#mBat1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="position∈Personne → Zone" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_s02gkMGfEeiEVeQ7ZLfZtg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ext=position∼[{Exterieur}]" org.eventb.core.source="/TPB/mBat1.bum|org.eventb.core.machineFile#mBat1|org.eventb.core.invariant#_8IT94MLvEeiX8-63veHLaA"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
